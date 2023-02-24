@@ -14,5 +14,8 @@ public class Calculator {
 	public double addition(double firstNum, double secondNum) {
 		return firstNum + secondNum;
 	}
+	public double substraction(double firstNum, double secondNum) {
+		return firstNum - secondNum;
+	}
 
 }

@@ -17,6 +17,19 @@ public class AppTest {
 		
 		
 	}
+	@Test 
+	public void testSubstraction() {
+		double expected = 10;
+		double actual = calc.substraction(23, 13);
+		assertEquals(expected, actual,0.001);
+	}
+	@Test
+	public void testMemory() {
+		double mem = 10;
+		calc.setMemory(mem);
+		double total = calc.addition(calc.getMemory(), 10);
+		assertEquals(20,total,0.001);
+	}
 	@BeforeClass
 	public static void startUp() {
 		calc = new Calculator();
