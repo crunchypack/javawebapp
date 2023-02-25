@@ -2,7 +2,7 @@ package webapp;
 
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertThat;
+
 
 import java.io.IOException;
 
@@ -45,7 +45,7 @@ public class AppTest {
 
 		    servlet.doGet(request, response);
 
-		    assertEquals(response.getContentAsString(), "Full Name: Spring Test");
+		    assertEquals("Full Name: Spring Test", response.getContentAsString());
 	}
 	
 	@BeforeClass
