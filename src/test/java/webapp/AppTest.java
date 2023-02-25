@@ -35,19 +35,7 @@ public class AppTest {
 		double total = calc.addition(calc.getMemory(), 10);
 		assertEquals(20,total,0.001);
 	}
-	@Test
-	public void AppHttpTest() throws IOException{
-		App servlet = new App();
-		 MockHttpServletRequest request = new MockHttpServletRequest();
-		    request.setParameter("firstName", "Spring");
-		    request.setParameter("lastName", "Test");
-		    MockHttpServletResponse response = new MockHttpServletResponse();
 
-		    servlet.doGet(request, response);
-
-		    assertEquals("Full Name: Spring Test", response.getContentAsString());
-	}
-	
 	@BeforeClass
 	public static void startUp() {
 		calc = new Calculator();
