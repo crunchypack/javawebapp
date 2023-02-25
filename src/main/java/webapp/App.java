@@ -11,10 +11,13 @@ import javax.servlet.http.HttpServletResponse;
 public class App extends HttpServlet{
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse res) {
-		RequestDispatcher rd = req.getRequestDispatcher("index.jsp");
+		
 		try {
-			rd.forward(req, res);
-		} catch (ServletException | IOException e) {
+			String firstName = req.getParameter("firstName");
+	        String lastName = req.getParameter("lastName");
+
+	        res.getWriter().append("Full Name: " + firstName + " " + lastName);
+		} catch ( IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}

@@ -2,9 +2,14 @@ package webapp;
 
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertThat;
+
+import java.io.IOException;
 
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.springframework.mock.web.MockHttpServletRequest;
+import org.springframework.mock.web.MockHttpServletResponse;
 
 public class AppTest {
 	static Calculator calc;
@@ -30,6 +35,19 @@ public class AppTest {
 		double total = calc.addition(calc.getMemory(), 10);
 		assertEquals(20,total,0.001);
 	}
+	@Test
+	public void AppHttpTest() throws IOException{
+		App servlet = new App();
+		 MockHttpServletRequest request = new MockHttpServletRequest();
+		    request.setParameter("firstName", "Spring");
+		    request.setParameter("lastName", "Test");
+		    MockHttpServletResponse response = new MockHttpServletResponse();
+
+		    servlet.doGet(request, response);
+
+		    assertEquals(response.getContentAsString(), "Full Name: Spring Test");
+	}
+	
 	@BeforeClass
 	public static void startUp() {
 		calc = new Calculator();
