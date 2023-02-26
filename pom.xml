@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.infosys</groupId>
 	<artifactId>webapp</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.1</version>
 	<packaging>war</packaging>
 	<name>webapp Maven Webapp</name>
 	<url>http://localhost</url>
@@ -94,6 +94,13 @@
 				<plugin>
 					<artifactId>maven-war-plugin</artifactId>
 					<version>3.2.2</version>
+					<configuration>
+						<archive>
+							<manifestEntries>
+								<version>${project.version}</version>
+							</manifestEntries>
+						</archive>
+					</configuration>
 				</plugin>
 				<plugin>
 					<artifactId>maven-install-plugin</artifactId>
@@ -107,10 +114,10 @@
 		</pluginManagement>
 	</build>
 	<distributionManagement>
-    <repository>
-        <id>central</id>
-        <name>Ray-Tracer-releases</name>
-        <url>http://localhost:8081/artifactory/libs-release</url>
-    </repository>
-</distributionManagement>
+		<repository>
+			<id>central</id>
+			<name>Ray-Tracer-releases</name>
+			<url>http://localhost:8081/artifactory/libs-release-local</url>
+		</repository>
+	</distributionManagement>
 </project>
