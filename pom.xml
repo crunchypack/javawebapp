@@ -107,9 +107,10 @@
 		</pluginManagement>
 	</build>
 	<distributionManagement>
-		<repository>
-			<id>artifactory</id>
-			<url>https://localhost:8081/artifactory/libs-release-local</url>
-		</repository>
-	</distributionManagement>
+    <repository>
+        <id>central</id>
+        <name>Ray-Tracer-releases</name>
+        <url>http://localhost:8081/artifactory/libs-release</url>
+    </repository>
+</distributionManagement>
 </project>
