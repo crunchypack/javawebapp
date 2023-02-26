@@ -106,4 +106,10 @@
 			</plugins>
 		</pluginManagement>
 	</build>
+	<distributionManagement>
+		<repository>
+			<id>artifactory</id>
+			<url>https://localhost:8081/artifactory/libs-release-local</url>
+		</repository>
+	</distributionManagement>
 </project>
