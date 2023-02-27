@@ -7,11 +7,12 @@ import java.util.logging.Logger;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-public class App extends HttpServlet{
+@WebServlet("/Calculator")
+public class ServletCalc extends HttpServlet{
 	
 	protected void processRequest(HttpServletRequest req, HttpServletResponse res) {
 		
@@ -21,7 +22,7 @@ public class App extends HttpServlet{
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet ServletCalculo</title>");            
+            out.println("<title>Servlet</title>");            
             out.println("</head>");
             out.println("<body>");
             
@@ -30,14 +31,13 @@ public class App extends HttpServlet{
             
             Calculator calc = new Calculator();
             double result = calc.addition(numOne, numTwo);
+            out.println("<h3>Result</h3>");
+            out.println("<p>"+result+"</p>");
             
-            RequestDispatcher rd = req.getRequestDispatcher("result.jsp");
-            req.setAttribute("sum", result);
-            rd.forward(req, res);
             
             out.println("</body>");
             out.println("</html>");
-		} catch (ServletException | IOException e) {
+		} catch (IOException e) {
 			Logger.getAnonymousLogger().log(Level.WARNING, e.getMessage());
 		}
 	}

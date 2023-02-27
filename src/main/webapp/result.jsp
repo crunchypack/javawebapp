@@ -8,6 +8,6 @@
         <h3>Calculator</h3>
         <br>        
         <h1>Result </h1>
-        <%= request.getAttribute("sum").toString() %>
+
     </body>
 </html>

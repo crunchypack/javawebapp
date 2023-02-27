@@ -1,5 +1,5 @@
 <%@page language="java" contentType="text/html" pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +10,7 @@
 </head>
 <body>
 <h1>Hello Losers!!</h1>
-<form id="calculator" action="result.jsp" method="post">
+<form id="calculator" action="Calculator" method=post >
     <p>
         <input name="left">
         <input name="right">
@@ -18,6 +18,7 @@
     </p>
 
 </form>
+
 
   
 </body>
