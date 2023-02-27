@@ -33,7 +33,7 @@ public class ServletCalcTest {
 		double mem = 10;
 		calc.setMemory(mem);
 		double total = calc.addition(calc.getMemory(), 10);
-		assertEquals(20,total,0.001);
+		assertEquals(22,total,0.001);
 	}
 
 	@BeforeClass
