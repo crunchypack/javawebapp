@@ -10,7 +10,7 @@
 </head>
 <body>
 <h1>Hello Losers!!</h1>
-<form id="calculator" action="index" method="post">
+<form id="calculator" action="index.jsp" method="post">
     <p>
         <input name="left">
         <input name="right">
