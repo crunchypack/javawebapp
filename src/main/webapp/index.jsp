@@ -1,4 +1,4 @@
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page language="java" contentType="text/html" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,7 +16,7 @@
         <input name="right">
         <input type="submit" value="add">
     </p>
-    <p>Result: <span id="result">${ sum }"sss</span></p>
+    <p>Result: <span id="result"><% out.print(request.getAttribute("sum")); %></span></p>
 </form>
 
   
