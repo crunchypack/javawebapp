@@ -3,9 +3,9 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.infosys</groupId>
 	<artifactId>webapp</artifactId>
-	<version>1.0.1</version>
+	<version>1.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
-	<name>webapp Maven Webapp</name>
+	<name>webapp devapp</name>
 	<url>http://localhost</url>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -113,7 +113,7 @@
 		<repository>
 			<id>central</id>
 			<name>Ray-Tracer-releases</name>
-			<url>http://localhost:8081/artifactory/libs-release-local</url>
+			<url>http://localhost:8081/artifactory/libs-snaphot-local</url>
 		</repository>
 	</distributionManagement>
 </project>
