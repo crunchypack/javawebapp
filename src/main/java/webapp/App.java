@@ -31,7 +31,7 @@ public class App extends HttpServlet{
             Calculator calc = new Calculator();
             double result = calc.addition(numOne, numTwo);
             
-            RequestDispatcher rd = req.getRequestDispatcher("index.jsp");
+            RequestDispatcher rd = req.getRequestDispatcher("result.jsp");
             req.setAttribute("sum", result);
             rd.forward(req, res);
             
